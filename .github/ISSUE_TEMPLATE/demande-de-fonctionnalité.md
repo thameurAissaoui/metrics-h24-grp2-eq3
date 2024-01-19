@@ -2,7 +2,7 @@
 name: Demande de fonctionnalité
 about: Proposer une idée pour ce projet
 title: ''
-labels: enhancement
+labels: ''
 assignees: ''
 
 ---
