@@ -1,6 +1,6 @@
 ---
 name: Rapport de bug
-about: Créer un rapport pour nous aider à nous améliorer
+about: Utilisez ce modèle pour signaler un bug.
 title: ''
 labels: bug
 assignees: ''
@@ -22,6 +22,12 @@ Une description claire et concise de ce à quoi vous vous attendiez.
 
 **Captures d'écran**
 Le cas échéant, ajoutez des captures d'écran pour expliquer votre problème.
+
+**Environnement (veuillez compléter les informations suivantes) :**
+ - OS: [ex: iOS]
+ - Navigateur [ex: chrome, safari]
+ - Version [ex: 22]
+
 
 **Contexte supplémentaire**
 Ajoutez ici tout autre contexte sur le problème.
