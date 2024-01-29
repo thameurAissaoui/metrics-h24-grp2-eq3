@@ -14,4 +14,3 @@ jobs:
           project: 'Kanban-metrics-h24-grp2-eq3'
           column: 'Backlog'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-
