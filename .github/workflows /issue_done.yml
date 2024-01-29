@@ -1,0 +1,16 @@
+name: Move Closed Issue to Done
+
+on:
+  issues:
+    types: [closed]
+
+jobs:
+  move-to-done:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Move Issue to Done Column
+        uses: alex-page/github-project-automation-plus@v0.8.1
+        with:
+          project: 'Kanban-metrics-h24-grp2-eq3'
+          column: 'Terminée'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}

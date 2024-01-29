@@ -1,0 +1,16 @@
+name: Move New Issue to To Do
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  move-to-to-do:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Move Issue to To Do Column
+        uses: alex-page/github-project-automation-plus@v0.8.1
+        with:
+          project: 'Kanban-metrics-h24-grp2-eq3'
+          column: 'À faire'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}

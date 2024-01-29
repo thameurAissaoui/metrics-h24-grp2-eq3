@@ -1,0 +1,16 @@
+name: Move New Issues to Backlog
+
+on:
+  issues:
+    types: [unassigned, opened, reopened]
+
+jobs:
+  move-to-backlog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Move to Backlog Column
+        uses: alex-page/github-project-automation-plus@v0.8.1
+        with:
+          project: 'Kanban-metrics-h24-grp2-eq3'
+          column: 'Backlog'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}

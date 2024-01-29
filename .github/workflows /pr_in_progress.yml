@@ -1,0 +1,16 @@
+name: Move Opened PR to In Progress
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  move-to-in-progress:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Move PR to In Progress Column
+        uses: alex-page/github-project-automation-plus@v0.8.1
+        with:
+          project: 'Kanban-metrics-h24-grp2-eq3'
+          column: 'En cours'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
