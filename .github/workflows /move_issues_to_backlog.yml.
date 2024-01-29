@@ -2,7 +2,7 @@ name: Move New Issues to Backlog
 
 on:
   issues:
-    types: [opened]
+    types: [unassigned, opened, reopened]
 
 jobs:
   move-to-backlog:
