@@ -44,6 +44,21 @@ index.mjs - Main entry point module
 
 ```
 
+## Routes
+
+- http://localhost:3000/metriquesKanban/leadtime/Task
+- http://localhost:3000/metriquesKanban/leadtime/Periode
+- http://localhost:3000/metriquesKanban/taskCount/colonne
+- http://localhost:3000/metriquesKanban/taskCount/periode
+- http://localhost:3000/metriquesPullRequests/metrique1
+- http://localhost:3000/metriquesPullRequests/metrique2
+- http://localhost:3000/metriquesPullRequests/metrique3
+- http://localhost:3000/metriquesPullRequests/metrique4
+- http://localhost:3000/metriquesPullRequests/metrique5
+- http://localhost:3000/snapshot
+- http://localhost:3000/test/db/status
+- http://localhost:3000/test/github/getboard
+- http://localhost:3000/test/github/getpr
 ## Path example 
 
 ![path example](https://www.plantuml.com/plantuml/png/JOyx3i9034JxFOLBA7812XG941GW0gAaSH83YpOss0xY-6JvI9IUUVCab-QetdSfH6xf2KKn1PNUIGqci3eSAjZJlITp2xyyCpDXLqdfm-rp0olaDaK-X_yomnjfAMMkKcd8xASyycZ13TwiJ-Xa8FML6ZSugNJVqJXynzdJ29_YUV3CqN6Gk4PwO89Hlciq0b5OAjukk_NuoDkt3cPAw54ubCJjyEaB)
