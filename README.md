@@ -45,11 +45,4 @@ index.mjs - Main entry point module
 
 ## Path example 
 
-```plantuml
-@startuml
-index --> routers : HTTP Requests
-routers --> Controllers : Route Handling
-Controllers --> Models : Process Request\n(Encapsulates objects from Models)
-Models --> config : Data Retrieval (Database or GraphQL)\nObject Creation
-@enduml
-```
+![path example](https://www.plantuml.com/plantuml/png/JOyx3i9034JxFOLBA7812XG941GW0gAaSH83YpOss0xY-6JvI9IUUVCab-QetdSfH6xf2KKn1PNUIGqci3eSAjZJlITp2xyyCpDXLqdfm-rp0olaDaK-X_yomnjfAMMkKcd8xASyycZ13TwiJ-Xa8FML6ZSugNJVqJXynzdJ29_YUV3CqN6Gk4PwO89Hlciq0b5OAjukk_NuoDkt3cPAw54ubCJjyEaB)
