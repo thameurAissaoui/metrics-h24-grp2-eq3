@@ -15,7 +15,7 @@ class EtatKanban {
         
         // get info...
 
-        return JSON.stringify(columns);
+        return columns;
 
     }
 }
