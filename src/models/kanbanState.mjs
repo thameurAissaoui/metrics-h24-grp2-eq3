@@ -4,6 +4,7 @@ class EtatKanban {
 
         // Example response
         // {
+        //     "timestamp": "******"
         //     "columns": [
         //         { "name": "To Do", "tasks": 1 },
         //         { "name": "In Progress", "tasks": 2 },
