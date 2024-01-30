@@ -1,18 +1,22 @@
-const { Router } = require("express");
-const controller = require("../controllers/metriquesKanban.mjs");
+import { Router } from "express";
+import controller from "../controllers/metriquesKanban.mjs";
 
 const router = Router();
 
-router.route("/leadTimeTache/:task")
-    .get(controller.leadTimeTache)
+// Lead time pour une tache donnee
+router.route("/leadtime/Task")
+    .get(controller.leadTimeTask);
 
-router.route("/leadTimePeriode/:start/:end")
-    .get(controller.leadTimePeriode)
+// Lead time pour les taches terminees dans une periode donnee
+router.route("/leadtime/periode")
+    .get(controller.leadTimePeriode);
 
-router.route("/tachesActivesColonne/:colonne")
-    .get(controller.tachesActivesColonne)
+// Nombre de taches actives pour une colonne donnee
+router.route("/taskCount/colonne")
+    .get(controller.taskCountColonne);
 
-router.route("/tachesCompleteesPeriode/:start/:end")
-    .get(controller.tachesCompleteesPeriode)
+// Nombre de taches completees pour une periode donnee
+router.route("/taskCount/periode")
+    .get(controller.taskCountPeriode);
 
-module.exports = router;
+export default router;

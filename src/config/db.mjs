@@ -1,33 +1,47 @@
-// Demo du repo de mon ancient cours
-// Marcos Dias de Assuncao
-
-import mariadb from 'mariadb';
 import dotenv from 'dotenv';
-dotenv.config();
+import pkg  from 'pg';
 
-class MariaDBPool {
+const dotEnv = dotenv.config();
+
+
+class DBConnection {
     constructor() {
-        this.pool = mariadb.createPool({
-            host: process.env.MARIADB_HOST,
-            user: process.env.MARIADB_USER,
-            password: process.env.MARIADB_PASSWORD,
-            database: process.env.MARIADB_DATABASE,
-            connectionLimit: 5
+
+        this.pool = new pkg.Pool({
+            user: process.env.DB_USER,
+            host: process.env.DB_HOST,
+            database: process.env.DB_NAME,
+            password: process.env.DB_PASSWORD,
+            port: 5432, // Default PostgreSQL port
         });
+
     }
 
-    async query(sqlStmt, ...values) {
-        let connection;
+    async connect() {
+        return await this.pool.connect();
+    }
+
+    async status() {
+        return {
+            totalCount: this.pool.totalCount,
+            idleCount: this.pool.idleCount,
+            waitingCount: this.pool.waitingCount,
+        };
+    }
+
+
+    async query(text, params) {
+        const client = await this.pool.connect();
+
         try {
-            connection = await this.pool.getConnection();
-            return await connection.query(sqlStmt, values);
-        } catch (error) {
-            throw error;
+            const result = await client.query(text, params);
+            return result.rows;
         } finally {
-            await connection?.end();
+            client.release();
         }
     }
+
 }
 
-const instance = new MariaDBPool();
+const instance = new DBConnection();
 export default instance;

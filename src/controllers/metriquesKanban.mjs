@@ -1,49 +1,44 @@
-const model = require("../models/metriquesKanban.mjs");
-const { Response } = require("./util");
+import model from '../models/kanbanState.mjs';
+import { Response } from "./abstract.mjs";
 
-async function leadTimeTache(req, res){
-    let response = model.leadTimeTache(req.params.task);
+class MetriquesKanbanController {
 
-    if (response === undefined) {
-        res.status(404);
-        res.json(Response.error(404, ":("));
-    } else {
-        res.json(Response.ok(response));
+    async leadTimeTask(req, res) {
+        try {
+            const response = await model.leadTimeTask();
+            res.json(Response.ok(response));
+        } catch (error) {
+            res.status(505);
+        }
     }
+
+    async leadTimePeriode(req, res) {
+        try {
+            const response = await model.leadTimePeriode();
+            res.json(Response.ok(response));
+        } catch (error) {
+            res.status(505);
+        }
+    }
+
+    async taskCountColonne(req, res) {
+        try {
+            const response = await model.taskCountColonne();
+            res.json(Response.ok(response));
+        } catch (error) {
+            res.status(505);
+        }
+    }
+
+    async taskCountPeriode(req, res) {
+        try {
+            const response = await model.taskCountPeriode();
+            res.json(Response.ok(response));
+        } catch (error) {
+            res.status(505);
+        }
+    }
+
 }
 
-async function leadTimePeriode(req, res){
-    let response = model.leadTimePeriode(req.params.start, req.params.end);
-
-    if (response === undefined) {
-        res.status(404);
-        res.json(Response.error(404, ":("));
-    } else {
-        res.json(Response.ok(response));
-    }
-}
-
-async function tachesActivesColonne(req, res){
-    let response = model.tachesActivesColonne(req.params.colonne);
-
-    if (response === undefined) {
-        res.status(404);
-        res.json(Response.error(404, ":("));
-    } else {
-        res.json(Response.ok(response));
-    }
-}
-
-async function tachesCompleteesPeriode(req, res){
-    let response = model.tachesCompleteesPeriode(req.params.start, req.params.end);
-
-    if (response === undefined) {
-        res.status(404);
-        res.json(Response.error(404, ":("));
-    } else {
-        res.json(Response.ok(response));
-    }
-}
-
-
-module.exports = { leadTimeTache, leadTimePeriode, tachesActivesColonne, tachesCompleteesPeriode };
+export default new MetriquesKanbanController();
