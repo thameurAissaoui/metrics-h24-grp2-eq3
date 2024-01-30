@@ -8,6 +8,7 @@ import gitHub from './config/github.mjs';
 import metriquesKanbanRouter from './routers/metriquesKanban.mjs';
 import metriquesPullRequestsRouter from './routers/metriquesPullRequests.mjs';
 import metriquesVisualisationRouter from './routers/metriquesVisualisation.mjs';
+import testRouter from './routers/test.mjs';
 
 const dotEnv = dotenv.config();
 
@@ -19,6 +20,7 @@ app.use(express.json());
 app.use("/metriquesKanban", metriquesKanbanRouter);
 app.use("/metriquesPullRequests", metriquesPullRequestsRouter);
 app.use("/snapshot", metriquesVisualisationRouter);
+app.use("/test", testRouter);
 
 try {
     await db.connect();
