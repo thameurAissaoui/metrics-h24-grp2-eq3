@@ -16,31 +16,14 @@ class GitHubConnection {
 
     async getBoard() {
         
-        // Get first 10 columns
-        //  Then get first 10 cards for each columns
+        // Get le title du projet #6 (notre projet)
         const query = gql`
         query {
-            repository(owner: "${process.env.API_OWNER}", name: "${process.env.API_NAME}") {
-                projects(search: "Kanban-metrics-h24-grp2-eq3", first: 1) {
-                    nodes {
-                      name
-                      columns(first: 10) {
-                        nodes {
-                          name
-                          cards(first: 10) {
-                            nodes {
-                              content {
-                                ... on Issue {
-                                  title
-                                  url
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+            viewer {
+                login
+                projectV2(number: 6) {
+                    title
+                }
               }
           }
       `;
