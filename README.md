@@ -6,6 +6,6 @@ Développement de la solution logicielle Oxygen CS pour la compagnie Oxygen Soft
 
 ## Contributions
 
--Aissaoui, Thamer ¯\\_(ツ)_/¯                         
+-Aissaoui, Thamer                      
 -Caron, Louis-Antoine                             
--Nassih, Nabil ¯\\_(ツ)_/¯
+-Nassih, Nabil
