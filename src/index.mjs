@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 
 
 import db from './config/db.mjs';
+import gitHub from './config/github.mjs';
 
 import metriquesKanbanRouter from './routers/metriquesKanban.mjs';
 import metriquesPullRequestsRouter from './routers/metriquesPullRequests.mjs';
@@ -22,6 +23,8 @@ app.use("/snapshot", metriquesVisualisationRouter);
 try {
     await db.connect();
     console.log(db.status());
+
+    console.log(await gitHub.testConnection());
 
     app.listen(PORT, () => {
         console.log(`Serveur écoutant sur le port ${PORT}`)
