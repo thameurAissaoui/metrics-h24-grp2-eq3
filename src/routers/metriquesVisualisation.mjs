@@ -4,6 +4,6 @@ import controller from "../controllers/metriquesVisualisation.mjs";
 const router = Router();
 
 router.route("/")
-    .get(controller.status);
+    .post(controller.status);
 
 export default router;

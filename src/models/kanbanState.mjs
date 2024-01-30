@@ -1,3 +1,5 @@
+import db from '../config/db.mjs';
+
 class EtatKanban {
 
     async status() {
@@ -18,6 +20,34 @@ class EtatKanban {
 
         return columns;
 
+    }
+
+    async leadTimeTask(id) {
+        // query BD ici
+        const queryResult = await instance.query('SELECT * FROM your_table');
+        
+        return null;
+    }
+
+    async leadTimePeriode(start, end) {
+        // query BD ici
+        const queryResult = await instance.query('SELECT * FROM your_table');
+
+        return null;
+    }
+
+    async taskCountColonne(colonne) {
+        // query BD ici
+        const queryResult = await instance.query('SELECT * FROM your_table');
+
+        return null;
+    }
+
+    async taskCountPeriode(start, end) {
+        // query BD ici
+        const queryResult = await instance.query('SELECT * FROM your_table');
+        
+        return null;
     }
 }
 
