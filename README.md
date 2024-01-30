@@ -59,6 +59,11 @@ index.mjs - Main entry point module
 - http://localhost:3000/test/db/status
 - http://localhost:3000/test/github/getboard
 - http://localhost:3000/test/github/getpr
+
 ## Path example 
 
 ![path example](https://www.plantuml.com/plantuml/png/JOyx3i9034JxFOLBA7812XG941GW0gAaSH83YpOss0xY-6JvI9IUUVCab-QetdSfH6xf2KKn1PNUIGqci3eSAjZJlITp2xyyCpDXLqdfm-rp0olaDaK-X_yomnjfAMMkKcd8xASyycZ13TwiJ-Xa8FML6ZSugNJVqJXynzdJ29_YUV3CqN6Gk4PwO89Hlciq0b5OAjukk_NuoDkt3cPAw54ubCJjyEaB)
+
+## Design BD
+
+![bd design](https://www.plantuml.com/plantuml/png/LOyn2iCm34LtdKBTMdg3J9cwP2cqUr5ifL6mvM0vGmYvUqC2BLt4up_uVDLMA9Sf1e2JvqwKyKbjO7I1pF0RthD4odF3CowTSF3hpzrIPddhduDU_5OYsGK-cEDOPemSMyu6SFGtf2tfGscqFXN31H2lABv2qR9paSZRnZXMFzp5O4bVdWfLE-9vlwaTs1LC7L88w5AOeXgIUdIKlLrW1QXP_VRn1m00 "")
