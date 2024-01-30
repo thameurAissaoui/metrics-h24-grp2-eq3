@@ -40,6 +40,7 @@ routers
     ├── metriquesVisualisation.mjs - Défini les routes 
     └── test.mjs - POUR TESTS
 index.mjs - Main entry point module
+.env - FICHIER À AJOUTER
 
 ```
 
