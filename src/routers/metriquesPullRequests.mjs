@@ -3,19 +3,26 @@ import controller from "../controllers/metriquesPullRequests.mjs";
 
 const router = Router();
 
-router.route("/metrique1")
-    .get(controller.metrique1);
+router.route("/getPRCommitsMes")
+    .get(controller.getPRCommitsMes);
 
-router.route("/metrique2")
-    .get(controller.metrique2);
+router.route("/getPRCommitsCount")
+    .get(controller.getPRCommitsCount);
 
-router.route("/metrique3")
-    .get(controller.metrique3);
 
-router.route("/metrique4")
-    .get(controller.metrique4);
+router.route("/getPRCommentsCount")
+    .get(controller.getPRCommentsCount);
 
-router.route("/metrique5")
-    .get(controller.metrique5);
+router.route("/getPRReviewsCount")
+    .get(controller.getPRReviewsCount);
+
+
+router.route("/getPRCycleTime")
+    .get(controller.getPRCycleTime);
+
+router.route("/getBoard")
+    .get(controller.getBoard);
+
+    
 
 export default router;

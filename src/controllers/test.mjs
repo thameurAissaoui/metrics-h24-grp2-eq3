@@ -22,6 +22,17 @@ class MetriquesVisualisationController {
         }
     }
 
+
+    async getPRCommitsMes(req, res) {
+        try {
+            const status = await github.getPRCommitsMes();
+            res.json(Response.ok(status));
+
+        } catch (error) {
+            res.status(505);
+        }
+    }
+
     async status(req, res) {
         try {
             const status = await db.status();
