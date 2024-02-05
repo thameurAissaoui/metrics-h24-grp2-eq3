@@ -9,6 +9,9 @@ router.route("/github/getboard")
 router.route("/github/getpr")
     .get(controller.getpr);
 
+router.route("/github/getPRCommitsMes")
+    .get(controller.getPRCommitsMes);
+
 router.route("/db/status")
     .get(controller.status);
 

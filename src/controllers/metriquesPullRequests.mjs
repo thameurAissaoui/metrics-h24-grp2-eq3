@@ -1,48 +1,64 @@
 import model from '../models/PR.mjs';
 import { Response } from "./abstract.mjs";
+import github from "../config/github.mjs"
 
 class MetriquesPullRequestsController {
 
-    async metrique1(req, res) {
+    async getPRCommitsMes(req, res) {
         try {
-            const metrique = await model.metrique1();
-            res.json(Response.ok(metrique));
+            const status = await github.getPRCommitsMes();
+            res.json(Response.ok(status));
+
         } catch (error) {
             res.status(505);
         }
     }
 
-    async metrique2(req, res) {
+    async getPRCommitsCount(req, res) {
         try {
-            const metrique = await model.metrique2();
-            res.json(Response.ok(metrique));
+            const status = await github.getPRCommitsCount();
+            res.json(Response.ok(status));
+
         } catch (error) {
             res.status(505);
         }
     }
 
-    async metrique3(req, res) {
+    async getPRCommentsCount(req, res) {
         try {
-            const metrique = await model.metrique3();
-            res.json(Response.ok(metrique));
+            const status = await github.getPRCommentsCount();
+            res.json(Response.ok(status));
+
         } catch (error) {
             res.status(505);
         }
     }
 
-    async metrique4(req, res) {
+    async getPRReviewsCount(req, res) {
         try {
-            const metrique = await model.metrique4();
-            res.json(Response.ok(metrique));
+            const status = await github.getPRReviewsCount();
+            res.json(Response.ok(status));
+
         } catch (error) {
             res.status(505);
         }
     }
 
-    async metrique5(req, res) {
+    async getPRCycleTime(req, res) {
         try {
-            const metrique = await model.metrique5();
-            res.json(Response.ok(metrique));
+            const status = await github.getPRCycleTime();
+            res.json(Response.ok(status));
+
+        } catch (error) {
+            res.status(505);
+        }
+    }
+
+    async getBoard(req, res) {
+        try {
+            const status = await github.getBoard();
+            res.json(Response.ok(status));
+
         } catch (error) {
             res.status(505);
         }
