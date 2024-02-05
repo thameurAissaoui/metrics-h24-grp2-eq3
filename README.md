@@ -6,9 +6,18 @@ Développement de la solution logicielle Oxygen CS pour la compagnie Oxygen Soft
 
 ## Contributions
 
--Aissaoui, Thamer                      
--Caron, Louis-Antoine                             
--Nassih, Nabil
+- Aissaoui, Thamer                      
+- Caron, Louis-Antoine                             
+- Nassih, Nabil
+
+## Technologies utilise
+
+- Express : pour les routes d'API
+- Dotenv : pour les variables d'environnement
+- graphql-request : pour simplifier la communication avec GitHub
+- pg : pour la communication avec la base de données
+- Nodemon : pour faciliter le developpement
+- jest : pour les tests
 
 ## Installation
 
