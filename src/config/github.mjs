@@ -52,8 +52,6 @@ class GitHubConnection {
 
     }
 
-    
-
     async getBoard() {
         
         // Get le title du projet #6 (notre projet)
