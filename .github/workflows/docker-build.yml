@@ -21,4 +21,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: metrics-h24-grp2-eq3/jsontest:latest
+        tags: thaais1/metrics-h24-grp2-eq3:latest
