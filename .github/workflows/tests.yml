@@ -13,7 +13,5 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 14.x
-    - name: npm install
-      run: npm ci
     - name: tests
       run: npm test
